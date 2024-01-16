@@ -2,14 +2,14 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-from lightgbm import LGBMClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 def main():
     st.title("Propensity Modeling App")
 
-    # Load the LightGBM model
-    with open('lightgbm_model_ros.pkl', 'rb') as file:
-        lightgbm_model = pickle.load(file)
+    # Load the Random Forest model
+    with open('random_forest_model_ros.pkl', 'rb') as file:
+        random_forest_model = pickle.load(file)
 
     # Sidebar
     st.sidebar.header("Input Features")
@@ -48,8 +48,8 @@ def main():
 
     if st.button("Predict"):
         # Make prediction
-        prediction = lightgbm_model.predict(input_data)[0]
-        prediction_proba = lightgbm_model.predict_proba(input_data)[:, 1][0]
+        prediction = random_forest_model.predict(input_data)[0]
+        prediction_proba = random_forest_model.predict_proba(input_data)[:, 1][0]
 
         # Display prediction result
         st.success(f"Predicted Class: {prediction}")
