@@ -2,16 +2,14 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-from xgboost import XGBClassifier
-import lightgbm as lgb
-
-
-# Loading the XGBoost model
-with open('lightgbm_model_ros.pkl', 'rb') as file:
-    lightgbm_model = pickle.load(file)
+from lightgbm import LGBMClassifier
 
 def main():
     st.title("Propensity Modeling App")
+
+    # Load the LightGBM model
+    with open('lightgbm_model_ros.pkl', 'rb') as file:
+        lightgbm_model = pickle.load(file)
 
     # Sidebar
     st.sidebar.header("Input Features")
