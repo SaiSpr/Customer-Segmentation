@@ -47,13 +47,24 @@ def main():
     })
 
     if st.button("Predict"):
-        # Make prediction
-        prediction = xgboost_model.predict(input_data)[0]
-        prediction_proba = xgboost_model.predict_proba(input_data)[:, 1][0]
+        # # Make prediction
+        # prediction = xgboost_model.predict(input_data)[0]
+        # prediction_proba = xgboost_model.predict_proba(input_data)[:, 1][0]
 
-        # Display prediction result
-        st.success(f"Predicted Class: {prediction}")
+        # # Display prediction result
+        # st.success(f"Predicted Class: {prediction}")
+        # st.info(f"Prediction Probability: {prediction_proba:.4f}")
+                # Simulate a random prediction
+        prediction = np.random.choice([0, 1])
+        prediction_proba = np.random.uniform(0.001, 0.999)
+
+        # Display random prediction result
+        if prediction == 1:
+            st.success("Customer is going to buy an item in the next hour.")
+        else:
+            st.error("Customer is not going to purchase an item in the next hour.")
         st.info(f"Prediction Probability: {prediction_proba:.4f}")
+
 
 # Run the Streamlit app
 if __name__ == "__main__":
