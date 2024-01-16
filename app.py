@@ -3,10 +3,12 @@ import pickle
 import numpy as np
 import pandas as pd
 from xgboost import XGBClassifier
+import lightgbm as lgb
+
 
 # Loading the XGBoost model
-with open('xgboost_model.pkl', 'rb') as file:
-    xgboost_model = pickle.load(file)
+with open('lightgbm_model_ros.pkl', 'rb') as file:
+    lightgbm_model = pickle.load(file)
 
 def main():
     st.title("Propensity Modeling App")
@@ -48,8 +50,8 @@ def main():
 
     if st.button("Predict"):
         # Make prediction
-        prediction = xgboost_model.predict(input_data)[0]
-        prediction_proba = xgboost_model.predict_proba(input_data)[:, 1][0]
+        prediction = lightgbm_model.predict(input_data)[0]
+        prediction_proba = lightgbm_model.predict_proba(input_data)[:, 1][0]
 
         # Display prediction result
         st.success(f"Predicted Class: {prediction}")
