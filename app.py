@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
 from xgboost import XGBClassifier
 
 # Loading the XGBoost model
@@ -18,14 +19,32 @@ def main():
     F = st.sidebar.slider("F", 0.0, 1.0, 0.5)
     M = st.sidebar.slider("M", 0.0, 1.0, 0.5)
     avg_time_between_purchase = st.sidebar.slider("Avg. Time Between Purchase", 0.0, 1.0, 0.5)
-    loyalty_levels = {
-        "Bronze": st.sidebar.checkbox("Bronze"),
-        "Silver": st.sidebar.checkbox("Silver"),
-        "Gold": st.sidebar.checkbox("Gold"),
-        "Platinum": st.sidebar.checkbox("Platinum")
-    }
 
-    input_data = np.array([no_of_days_active, R, F, M, avg_time_between_purchase] + list(loyalty_levels.values())).reshape(1, -1)
+    # Create a radio button for Loyalty Level
+    loyalty_level_options = ["Bronze", "Silver", "Gold", "Platinum"]
+    selected_loyalty_level = st.sidebar.radio("Select Loyalty Level", loyalty_level_options)
+
+    # Convert selected loyalty level to binary values
+    loyalty_levels = {
+        "Bronze": 0,
+        "Silver": 0,
+        "Gold": 0,
+        "Platinum": 0
+    }
+    loyalty_levels[selected_loyalty_level] = 1
+
+    # Create a DataFrame with input data
+    input_data = pd.DataFrame({
+        "no_of_days_active": [no_of_days_active],
+        "R": [R],
+        "F": [F],
+        "M": [M],
+        "avg_time_between_purchase": [avg_time_between_purchase],
+        "Loyalty_Level_Bronze": [loyalty_levels["Bronze"]],
+        "Loyalty_Level_Silver": [loyalty_levels["Silver"]],
+        "Loyalty_Level_Gold": [loyalty_levels["Gold"]],
+        "Loyalty_Level_Platinum": [loyalty_levels["Platinum"]],
+    })
 
     if st.button("Predict"):
         # Make prediction
