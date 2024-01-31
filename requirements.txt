@@ -1,4 +1,4 @@
-xgboost==2.0.1
+xgboost==1.7.6
 lightgbm
 numpy
 pandas
