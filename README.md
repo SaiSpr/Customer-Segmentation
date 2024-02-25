@@ -16,10 +16,9 @@ Predicting user behavior and segmenting customers in an e-commerce platform is c
 - [Modelling](#modelling)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Conclusion](#conclusion)
-- [APP Deployment](#app-deployment)
 - [Notebooks Overview](#notebooks-overview)
 - [Code Structure](#code-structure)
-- [License](#license)
+- [APP Deployment](#app-deployment)
 
 <br><br>
 
