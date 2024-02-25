@@ -28,19 +28,19 @@ The primary goal of this project is to gain actionable insights into user behavi
 
 # Project Aims
 
-**Aim 1: User Interaction Analysis:**
+**User Interaction Analysis:**
 To conduct comprehensive exploratory data analysis (EDA) on user interactions within the e-commerce platform, unraveling patterns and trends that characterize user engagement.
 
-**Aim 2: User Behavior Understanding:**
+**User Behavior Understanding:**
 To comprehensively understand user interactions, preferences, and engagement within the e-commerce platform.
 
-**Aim 3: Action-Based Insights:**
+**Action-Based Insights:**
 To understand user actions through univariate analysis, with a focus on the 'Action' column, providing insights into how customers interact with products.
 
-**Aim 4: RFM Feature Utilization:**
+**RFM Feature Utilization:**
 To employ Recency, Frequency, and Monetary (RFM) analysis for customer segmentation, creating a personalized understanding of user behavior for targeted marketing strategies.
 
-**Aim 5: Machine Learning Model Deployment:**
+**Machine Learning Model Deployment:**
 To apply and rigorously evaluate machine learning models, including logistic regression, Naive Bayes, Random Forest, XGBoost, and LightGBM, with the aim of predicting user actions and selecting the most effective model for deployment.
 
 # Dataset Overview
