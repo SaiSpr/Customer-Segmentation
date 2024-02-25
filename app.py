@@ -53,17 +53,6 @@ def main():
 
         # Display prediction result
         st.success(f"Predicted Class: {prediction}")
-        st.info(f"Prediction Probability: {prediction_proba:.4f}")
-                Simulate a random prediction
-        # prediction = np.random.choice([0, 1])
-        # prediction_proba = np.random.uniform(0.001, 0.999)
-
-        # # Display random prediction result
-        # if prediction == 1:
-        #     st.success("Customer is going to buy an item in the next hour.")
-        # else:
-        #     st.error("Customer is not going to purchase an item in the next hour.")
-        # st.info(f"Prediction Probability: {prediction_proba:.4f}")
 
 
 # Run the Streamlit app
