@@ -106,7 +106,6 @@ The project successfully built predictive models to determine the likelihood of 
 └── img                           - images used in the readme.
 
 ```
-
 # APP Deployment
 
-**Streamlit App:** [Customer_Insight_Xplorer](https://customer-segmentation-3uzjlpgpk8p6wumsqumzay.streamlit.app/)
+**Streamlit App:** [Customer_Insight_Xplorer](https://customerinsightxplorer-app.streamlit.app/)
