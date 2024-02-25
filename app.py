@@ -49,7 +49,7 @@ def main():
     if st.button("Predict"):
         # Make prediction
         prediction = xgboost_model.predict(input_data)[0]
-        prediction_proba = xgboost_model.predict_proba(input_data)[:, 1][0]
+        # prediction_proba = xgboost_model.predict_proba(input_data)[:, 1][0]
 
         # Display prediction result
         st.success(f"Predicted Class: {prediction}")
