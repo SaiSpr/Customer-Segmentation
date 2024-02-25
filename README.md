@@ -3,7 +3,7 @@
 
 Predicting user behavior and segmenting customers in an e-commerce platform is crucial for targeted marketing and personalized user experiences. This guide covers all aspects of the project, from problem statement to model deployment.
 
-![Banner](img/header.jpg)
+![Streamlit_app](https://github.com/SaiSpr/Customer_Insight_Xplorer/assets/63905195/6fe680aa-5d2e-4a65-9263-1eb3116635cc)
 
 <br><br>
 
@@ -74,10 +74,6 @@ Evaluation was based on various metrics, including Confusion Matrix, Precision, 
 
 The project successfully built predictive models to determine the likelihood of customer churning, providing actionable insights into user behavior, preferences, and purchasing dynamics.
 
-# APP Deployment
-
-**Streamlit App:** [Customer Segmentation and Propensity Modeling](https://customer-segmentation-3uzjlpgpk8p6wumsqumzay.streamlit.app/)
-
 # Notebooks Overview
 
 ## 1. PropensityData_EDA.ipynb
@@ -112,6 +108,6 @@ The project successfully built predictive models to determine the likelihood of 
 
 ```
 
-# License
+# APP Deployment
 
-*(Upcoming)*
+**Streamlit App:** [Customer_Insight_Xplorer](https://customer-segmentation-3uzjlpgpk8p6wumsqumzay.streamlit.app/)
